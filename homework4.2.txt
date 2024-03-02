@@ -1,0 +1,15 @@
+let unitOfMeasurement = "kilometers";
+let amount = 10;
+switch (unitOfMeasurement) {
+  case "kilometers":
+      console.log(`${amount} км is ${amount * 1000} м.`);
+      break;
+  case "hours":
+      console.log(`${amount} h is ${amount * 60} min.`);
+      break;
+  case "kilograms":
+      console.log(`${amount} kg is ${amount * 1000} gr.`);
+      break;
+  default:
+      console.log("Unknown unit of measurement");
+}
