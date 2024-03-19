@@ -1,0 +1,47 @@
+Task 1
+
+function myIsNaN(value) {
+    return value !== value;
+}
+
+Task 2
+
+function pad(string, symbol, totalLength, padStart) {
+    let paddingLength = totalLength - string.length; 
+    let padding = '';
+
+    for (let i = 0; i < paddingLength; i++) {
+        padding += symbol;
+    }
+    padding = padding.slice(0, paddingLength);
+
+    if (padStart) {
+        return padding + string; 
+    } else {
+        return string + padding; 
+}
+
+Task 3
+
+function checkProbabilityTheory(count) {
+    let evenCount = 0; // Лічильник парних чисел
+    let oddCount = 0;  // Лічильник непарних чисел
+
+    for (let i = 0; i < count; i++) {
+        let randomNumber = Math.floor(Math.random() * (1000 - 100 + 1)) + 100;
+        if (randomNumber % 2 === 0) {
+            evenCount++;
+        } else {
+            oddCount++;
+        }
+    }
+
+    let totalNumbers = evenCount + oddCount;
+    let evenPercentage = (evenCount / totalNumbers) * 100;
+    let oddPercentage = (oddCount / totalNumbers) * 100;
+
+    console.log(`Кількість згенерованих чисел: ${totalNumbers}`);
+    console.log(`Парних чисел: ${evenCount}`);
+    console.log(`Непарних чисел: ${oddCount}`);
+    console.log(`Відсоток парних до непарних: ${evenPercentage.toFixed(2)}% до ${oddPercentage.toFixed(2)}%`);
+}
